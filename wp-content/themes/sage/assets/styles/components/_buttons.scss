@@ -1,0 +1,17 @@
+.button {
+    color: $c-green;
+    background-color: transparent;
+    border: 1px solid $c-green;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+
+    &:hover {
+        background-color: $c-green;
+        color: #fff;
+        transition: .3s;
+        text-decoration: none;
+    }
+}
+

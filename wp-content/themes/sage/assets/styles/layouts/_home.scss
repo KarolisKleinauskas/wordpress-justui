@@ -1,0 +1,53 @@
+.home {
+
+    &-banner {
+
+        &__heading {
+            margin-bottom: 40px;
+
+        }
+
+        &__text {
+            margin-bottom: 40px;
+        }
+    }
+
+}
+
+.why {
+    &-heading {
+        margin-top: 40px;
+    }
+}
+
+.which {
+
+    &-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-repeater{
+        margin-top: 40px;
+    }
+
+    &-heading{
+        margin: 40px 0 40px 0;
+    }
+
+    &-text{
+        margin-top: 25px;
+    }
+
+}
+
+.steps {
+    &-heading{
+        margin: auto;
+    }
+
+    &-text{
+        text-align: center;
+    }
+}
