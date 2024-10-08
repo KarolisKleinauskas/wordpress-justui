@@ -33,12 +33,8 @@
     <?php if (get_field('why_heading')) { ?>
       <h1 class="why-heading"><?php the_field('why_heading') ?></h1>
     <?php } ?>
-
-
-
     <div class="row">
       <?php
-
       if (have_rows('why_repeater')):
         while (have_rows('why_repeater')):
           the_row(); ?>
@@ -47,7 +43,6 @@
             <h3><?php the_sub_field('heading') ?></h3>
             <p><?php the_sub_field('text') ?></p>
           </div>
-
           <?php
         endwhile;
       endif;
@@ -93,9 +88,7 @@
 
     <div class="which-repeater">
       <div class="row">
-
         <?php
-
         if (have_rows('which_repeater')):
           while (have_rows('which_repeater')):
             the_row(); ?>
@@ -104,7 +97,6 @@
               <img src="<?php the_sub_field('icon') ?>" class="img-fluid">
               <p><?php the_sub_field('text') ?></p>
             </div>
-
             <?php
           endwhile;
         endif;
@@ -133,27 +125,64 @@
       </div>
     </div>
     <div class="which-repeater">
-  <div class="row">
-    <?php
-    if (have_rows('steps_repeater')):
-      while (have_rows('steps_repeater')):
-        the_row(); ?>
-        <div class="col-6 mb-5">
-          <div class="row">
-            <div class="col-2">
-              <img src="<?php the_sub_field('icon') ?>" class="img-fluid rounded-circle">
-            </div>
-            <div class="col-10">
-              <h3 class=""><?php the_sub_field('heading') ?></h3>
-              <p><?php the_sub_field('text') ?></p>
-            </div>
-          </div>
-        </div>
+      <div class="row">
         <?php
-      endwhile;
-    endif;
-    ?>
+        if (have_rows('steps_repeater')):
+          while (have_rows('steps_repeater')):
+            the_row(); ?>
+            <div class="col-6 mb-5">
+              <div class="row">
+                <div class="col-2">
+                  <img src="<?php the_sub_field('icon') ?>" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-10">
+                  <h3 class=""><?php the_sub_field('heading') ?></h3>
+                  <p><?php the_sub_field('text') ?></p>
+                </div>
+              </div>
+            </div>
+            <?php
+          endwhile;
+        endif;
+        ?>
+      </div>
+    </div>
   </div>
 </div>
+
+
+<div class="purchase">
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class=""> <?php if (get_field('purchase_heading')) { ?>
+            <h1 class="purchase-heading mb-5">
+              <?php the_field('purchase_heading') ?>
+            </h1>
+          <?php } ?>
+          <?php if (get_field('purchase_first_paragraph')) { ?>
+            <div class="purchase-first_paragraph mb-4"><?php the_field('purchase_first_paragraph') ?></div>
+          <?php } ?>
+          <?php if (get_field('purchase_second_heading')) { ?>
+            <h3 class="purchase-second_heading mb-4"><?php the_field('purchase_second_heading') ?></h3>
+          <?php } ?>
+          <?php if (get_field('purchase_second_paragraph')) { ?>
+            <div class="purchase-second_paragraph mb-4"><?php the_field('purchase_second_paragraph') ?></div>
+          <?php } ?>
+          <?php if (get_field('purchase_quote')) { ?>
+            <div class="purchase-quote mb-4"><?php the_field('purchase_quote') ?></div>
+          <?php } ?>
+          <?php if (get_field('purchase_third_paragraph')) { ?>
+            <div class="purchase-third_paragraph mb-4"><?php the_field('purchase_third_paragraph') ?></div>
+          <?php } ?>
+
+        </div>
+      </div>
+      <div class="purchase-image d-flex justify-content-center align-items-center">
+        <?php if (get_field('purchase_image')): ?>
+          <img src="<?php the_field('purchase_image'); ?>" />
+        <?php endif; ?>
+      </div>
+    </div>
   </div>
 </div>
